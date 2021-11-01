@@ -1,3 +1,4 @@
+using InfoTeach.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
@@ -13,6 +14,11 @@ namespace InfoTeach
     {
         public static void Main(string[] args)
         {
+            using (var db = new LessonContext())
+            {
+                db.lessons.Add(new Lesson { lesson_id=1,lesson_name="Test",lesson_type=1,private_lesson=false});
+                db.SaveChanges();
+            }
             CreateHostBuilder(args).Build().Run();
         }
 
