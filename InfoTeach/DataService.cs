@@ -7,7 +7,6 @@ namespace InfoTeach
 {
     public class DataService
     {
-        //Class to interact with sql database
-        //create migrations first!
+        
     }
 }

@@ -1,21 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace InfoTeach.Models
 {
-    public class LessonContext : DbContext
-    {
-        public DbSet<Lesson> lessons { get; set; }
-    }
+    [Table("Lessons")]
     public class Lesson
     {
-        public int lesson_id { get; set; }
-        public string lesson_name { get; set; }
-        public int lesson_type { get; set; } = 0;
-        public bool private_lesson { get; set; } = false;
-        
+        [Key]
+        public int LessonId{ get; set; }
+
+        [Required(ErrorMessage = "Please enter a name for the lesson.")]
+        [StringLength(200)]
+        public string LessonName { get; set; }
+
+        [Required(ErrorMessage = "Please select a subject for the lesson.")]
+        [Range(1,int.MaxValue)]
+        [ForeignKey("Subject")]
+        public int SubjectId { get; set; }
+
+        public ICollection<Curriculum> Curriculums { get; set; }
+        public ICollection<Assignment> Assignments { get; set; }
+        public Subject Subject { get; set; }
+
+
     }
 }

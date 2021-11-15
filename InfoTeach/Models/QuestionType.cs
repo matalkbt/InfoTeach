@@ -7,15 +7,13 @@ using System.Threading.Tasks;
 
 namespace InfoTeach.Models
 {
-    [Table("Assignments")]
-    public class Assignment
+    [Table("QuestionTypes")]
+    public class QuestionType
     {
         [Key]
-        public int AssignmentId { get; set; }
-        [ForeignKey("Lesson")]
-        public int LessonId { get; set; }
-        public string AssignmentName { get; set; }
-        public Lesson Lesson { get; set; }
+        public int QuestionTypeId { get; set; }
+
+        public string Description { get; set; }
         public ICollection<Question> Questions { get; set; }
     }
 }

@@ -1,16 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace InfoTeach.Models
 {
+    [Table("Classroom")]
     public class Classroom
     {
-        public int classroom_id { get; set; }
-        public string class_name { get; set; }
-        public List<User> instructors { get; set; }
-        public List<User> students { get; set; }
-        public List<Lesson> lessons { get; set; }
+        [Key]
+        public int ClassroomId { get; set; }
+        [Required(ErrorMessage = "Please enter a name for the class.")]
+        [StringLength(200)]
+        public string ClassroomName { get; set; }
+        public ICollection<Teacher> Teachers { get; set; }
+        public ICollection<Student> Students { get; set; }
+        public ICollection<Curriculum> Curriculums { get; set; }
     }
 }

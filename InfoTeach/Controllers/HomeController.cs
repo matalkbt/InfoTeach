@@ -12,10 +12,12 @@ namespace InfoTeach.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private LessonsContext _ctx;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, LessonsContext ctx)
         {
             _logger = logger;
+            _ctx = ctx;
         }
 
         public IActionResult Index()
