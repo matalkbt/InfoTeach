@@ -25,7 +25,15 @@ namespace InfoTeach.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Page2()
+        {
+            return View();
+        }
+        public IActionResult Page3()
+        {
+            return View();
+        }
+        public IActionResult Page4()
         {
             return View();
         }
