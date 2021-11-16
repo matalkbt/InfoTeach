@@ -1,8 +1,85 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
+<!--
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+    -->
+
+<div class="row">
+    <div class="leftcolumn">
+        <div class="card">
+            <h2>Site Updates</h2>
+            <h5>InfoTeach Goes Live, Oct 18, 2021</h5>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        </div>
+        <div class="card">
+            <h2>TITLE HEADING</h2>
+            <h5>Title description, Sep 2, 2017</h5>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        </div>
+    </div>
+    <div class="rightcolumn">
+        <div class="card">
+            <h2>About Me</h2>
+            <div class="fakeimg" style="height:100px;">Image</div>
+            <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+        </div>
+        <div class="card">
+            <h3>Popular Post</h3>
+            <div class="fakeimg"><p>Image</p></div>
+            <div class="fakeimg"><p>Image</p></div>
+            <div class="fakeimg"><p>Image</p></div>
+        </div>
+        <div class="card">
+            <h3>Follow Me</h3>
+            <p>Some text..</p>
+        </div>
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+        <div id="id01" class="modal">
+
+            <form class="modal-content animate" action="/action_page.php" method="post">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <!-- <img src="img_avatar2.png" alt="Avatar" class="avatar">-->
+                </div>
+
+                <div class="container">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+
+                    <button type="submit">Login</button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                </div>
+
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+
+                <script>
+                    // Get the modal
+                    var modal = document.getElementById('id01');
+
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function (event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+                </script>
+            </form>
+        </div>
+    </div>
 </div>

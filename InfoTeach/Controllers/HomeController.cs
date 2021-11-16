@@ -25,15 +25,19 @@ namespace InfoTeach.Controllers
             return View();
         }
 
-        public IActionResult Page2()
+        public IActionResult InfoTeachContactUs()
         {
             return View();
         }
-        public IActionResult Page3()
+        public IActionResult InfoTeachSiteUpdates()
         {
             return View();
         }
-        public IActionResult Page4()
+        public IActionResult InfoTeachContribute()
+        {
+            return View();
+        }
+        public IActionResult InfoTeachAbout()
         {
             return View();
         }
