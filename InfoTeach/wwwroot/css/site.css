@@ -92,7 +92,7 @@ body {
 .footer {
     padding: 5px;
     text-align: center;
-    background: #ddd;
+    background: #8AB3FF;
     margin-top: 20px;
 }
 /*Text found in the footer*/
@@ -250,3 +250,4 @@ span.psw {
         width: 100%;
     }
 }
+
