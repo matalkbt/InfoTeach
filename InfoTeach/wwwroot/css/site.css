@@ -1,91 +1,25 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
-}
-
-/* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
-}
-
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  font-size: 14px;
-}
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-}
-
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-}
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
-}
-/**/
-
+﻿
 * {
     box-sizing: border-box;
 }
-
+/* Controls the right column*/
+/*#F3F7D4 , */
 body {
     font-family: Arial;
     padding: 10px;
-    background: #f1f1f1;
+    background: #FFFF;
+}
+
+.h2 {
+    color: #F25F68;
 }
 
 /* Header/Blog Title */
 .header {
     padding: 30px;
     text-align: center;
-    background: white;
+    background: #B2D732;
+    color: #F25F68;
 }
 
     .header h1 {
@@ -95,14 +29,14 @@ body {
 /* Style the top navigation bar */
 .topnav {
     overflow: hidden;
-    background-color: #333;
+    background-color: #8AB3FF;
 }
 
     /* Style the topnav links */
     .topnav a {
         float: left;
         display: block;
-        color: #f2f2f2;
+        color: black;
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
@@ -110,7 +44,7 @@ body {
 
         /* Change color on hover */
         .topnav a:hover {
-            background-color: #ddd;
+            background-color: #B2D732;
             color: black;
         }
 
@@ -119,28 +53,32 @@ body {
 .leftcolumn {
     float: left;
     width: 75%;
+    padding-right:20px;
+    
 }
 
 /* Right column */
 .rightcolumn {
     float: left;
     width: 25%;
-    background-color: #f1f1f1;
+    border-left:groove;
     padding-left: 20px;
+    padding-right: 20px;
 }
 
 /* Fake image */
 .fakeimg {
-    background-color: #aaa;
+    background-color: #8AB3FF;
     width: 100%;
     padding: 20px;
 }
 
 /* Add a card effect for articles */
 .card {
-    background-color: white;
+    background-color: #FFFF;
+    border-top:groove;
     padding: 20px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 /* Clear floats after the columns */
@@ -167,6 +105,7 @@ body {
     .leftcolumn, .rightcolumn {
         width: 100%;
         padding: 0;
+        border:hidden;
     }
 }
 
@@ -177,11 +116,6 @@ body {
         width: 100%;
     }
 }
-
-
-
-
-
 
 
 /* Full-width input fields */
@@ -237,6 +171,8 @@ span.psw {
     float: right;
     padding-top: 16px;
 }
+
+
 
 /* The Modal (background) */
 .modal {
