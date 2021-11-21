@@ -1,0 +1,12 @@
+﻿@model List<Lesson>
+
+<ul>
+    @foreach (var item in Model)
+    {
+
+        <li>
+            <input id="@item.LessonId" type="button" value="@item.LessonName" onclick="renderAssignments(this.id)" />
+        <!--TODO: Add user progress % on lesson. Or lesson details-->
+        </li>
+    }
+</ul>

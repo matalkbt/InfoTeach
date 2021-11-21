@@ -1,0 +1,11 @@
+﻿@model List<Subject>
+
+<ul>
+    @foreach (var item in Model)
+    {
+
+        <li>
+            <input id="@item.SubjectId" type="button" value="@item.Description" onclick="renderLessons(this.id)" />
+        </li>
+    }
+</ul>

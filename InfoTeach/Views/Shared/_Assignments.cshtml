@@ -1,0 +1,13 @@
+﻿@model List<Assignment>
+
+<ul>
+    @foreach (var item in Model)
+    {
+
+        <li>
+            <!--TODO: Add onclick function to either show questions or start assignment (Consult team) 
+                IF SHOW QUESTIONS: Collapseable divs?-->
+            <input id="@item.AssignmentId" type="button" value="@item.AssignmentName" onclick="" />
+        </li>
+    }
+</ul>

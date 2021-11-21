@@ -13,11 +13,12 @@
     <header>
         <div class="Navigation-Container">
             <div class="topnav">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Home">InfoTeach</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Home"><b>InfoTeach</b></a>
+                <a class="navbar-brand" asp-area="" asp-controller="Lessons" asp-action="MyLessons">My Lessons</a>
                 <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="ContactUs">Contact Us</a>
                 <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="SiteUpdates">Updates</a>
-                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="InfoTeachContribute">Contribute</a>
-                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="InfoTeachAbout">About Us</a>
+                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contribute">Contribute</a>
+                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About">About Us</a>
             </div>
     </div>
 </header>
@@ -33,7 +34,6 @@
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>

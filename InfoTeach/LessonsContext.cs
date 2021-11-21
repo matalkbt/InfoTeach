@@ -15,7 +15,9 @@ namespace InfoTeach
         public DbSet<Assignment> Assignments { get; set; }
         public DbSet<Classroom> Classrooms{ get; set; }
         public DbSet<Lesson> Lessons { get; set; }
-        public DbSet<QuestionType> question_Types { get; set; }
+        public DbSet<QuestionType> Question_Types { get; set; }
+        public DbSet<Subject> Subjects { get; set; }
+        public DbSet<Question> Questions { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

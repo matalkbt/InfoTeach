@@ -1,4 +1,37 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿/**
+ * On page load, call controller for subjects
+ **/
+if (top.location.pathname === '/Lessons/MyLessons') {
+    $(document).ready(function () {
+        $.ajax({
+            type: "GET",
+            url: '/Lessons/MySubjects',
+            success: function (data) {
+                $('#subjects').html(data);
+            }
+        });
+    });
+}
 
-// Write your JavaScript code.
+function renderLessons(id) {
+    $.ajax({
+        type: "GET",
+        url: '/Lessons/Lessons',
+        data: { subjectId: id },
+        success: function (data) {
+            $('#lessons').html(data);
+        }
+    });
+}
+
+function renderAssignments(id) {
+    $.ajax({
+        type: "GET",
+        url: '/Lessons/MyAssignments',
+        data: { lessonId: id },
+        success: function (data) {
+            $('#assignments').html(data);
+        }
+    });
+}
+
