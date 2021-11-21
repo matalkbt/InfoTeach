@@ -20,24 +20,24 @@ namespace InfoTeach.Controllers
             _ctx = ctx;
         }
 
-        public IActionResult Index()
+        public IActionResult Home()
         {
             return View();
         }
 
-        public IActionResult InfoTeachContactUs()
+        public IActionResult ContactUs()
         {
             return View();
         }
-        public IActionResult InfoTeachSiteUpdates()
+        public IActionResult SiteUpdates()
         {
             return View();
         }
-        public IActionResult InfoTeachContribute()
+        public IActionResult Contribute()
         {
             return View();
         }
-        public IActionResult InfoTeachAbout()
+        public IActionResult About()
         {
             return View();
         }
