@@ -46,6 +46,10 @@ namespace InfoTeach.Controllers
             _logger.LogDebug("Navigating to 'About'");
             return View();
         }
+        public IActionResult Privacy()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
