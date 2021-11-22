@@ -1,11 +1,17 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-<!--Manages the navigation bar for basic navigation.-->
+<!--Start of _LayoutNav.cshtml-->
+<!--Resopnsible for providing a navigation bar once the user logs in-->
+<!--
+To do, 
+-Add Dropdown Menu
+-Add User Validation
+-->
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="~/css/site.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["NavBar"] - InfoTeach</title>
+    <title>@ViewData["LessonsNav"] - Lessons</title>
 
 </head>
 <body>
@@ -14,7 +20,7 @@
         <div class="Navigation-Container">
             <div class="topnav">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Home"><b>InfoTeach</b></a>
-                <a class="nav-link text-dark" asp-area="" asp-controller="Lessons" asp-action="MyLessons">Lessions</a>
+                <a class="nav-link text-dark" asp-area="" asp-controller="Lessons" asp-action="MyLessons">Lessionssss</a>
                 <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="ContactUs">Contact us</a>
                 <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="SiteUpdates">Updates</a>
                 <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contribute">Contribute Test!</a>
@@ -37,4 +43,5 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+<!--End of _LayoutNav.cshtml-->
 </html>
