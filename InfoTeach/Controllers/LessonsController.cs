@@ -53,5 +53,16 @@ namespace InfoTeach.Controllers
                 .ToList();
             return PartialView("_Assignments",assignments);
         }
+
+        [HttpGet]
+        public ActionResult LoadAssignment(int assignmentId)
+        {
+            _logger.LogDebug($"Assignment requested with assignment id = {assignmentId}, querying database...");
+            var questions = _ctx.Questions
+                .Where(a => a.AssignmentId == assignmentId)
+                .ToList();
+            return PartialView("_AssignmentLayout", questions);
+        }
+
     }
 }

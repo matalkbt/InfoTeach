@@ -1,0 +1,42 @@
+﻿@model List<Question>
+    @using (Html.BeginForm("SubmitAssignment", "Lessons", FormMethod.Post))
+    {
+        
+            @foreach (var item in Model)
+            {
+                //USE TABLE TO FORMAT FORM IF NEEDED
+                    @switch (item.QuestionTypeId)
+                    {
+                        //cases must match with question type table in database
+                        //Multiple Choice
+                        case 1:
+                            <div id="@item.QuestionId">
+                                
+                                    @for (int i = 0; i < item.QuestionText.Split("\\n").Length; i++)
+                                    {
+                                        //Seperate each choice and the actual question via delimiter '\n'
+                                        if (i == 0)
+                                        {
+                                            <p id="questionText">@item.QuestionText.Split("\\n").ElementAt(i)</p>
+                                        }
+                                        else
+                                        {
+                                            <input type="radio" id="choice#${i}" name="@item.QuestionId" value="@item.QuestionText.Split("\\n").ElementAt(i)"/>
+                                            <label for="choice#${i}">@item.QuestionText.Split("\\n").ElementAt(i)</label><br />
+                                        }
+                                    }
+                                
+                            </div>
+                            break;
+
+                        //Short Text
+                        case 2:
+                            //TODO
+                            break;
+                    }
+
+
+                
+            }
+        
+    }

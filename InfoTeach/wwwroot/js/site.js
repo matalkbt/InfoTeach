@@ -35,3 +35,19 @@ function renderAssignments(id) {
     });
 }
 
+function loadAssignment(id) {
+    $.ajax({
+        type: "GET",
+        url: '/Lessons/LoadAssignment',
+        data: { assignmentId: id },
+        success: function (data) {
+            //Hide and disable nav
+            $("#lessonsNav").attr('disabled', true);
+            $("#lessonsNav").attr('hidden', true);
+
+            //Load assignment HTML
+            $("#assignmentContainer").html(data);
+        }
+    })
+}
+
